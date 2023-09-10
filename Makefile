@@ -28,16 +28,13 @@ add_commit_push:
 
 # Define the name of the Markdown file to append
 
-
-
+APPEND_FILE = Statistics_report.md  # Adjust the path as needed
 
 append_and_commit:
-	APPEND_FILE = Statistics_report.md  # Adjust the path as needed
 	# Append the content of the Markdown file to the README
 	cat $(APPEND_FILE) >> README.md
-	
 	# Check if there are any changes
-	@if [ -n "$$(git status --porcelain)" ]; then \
+	if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
 		# Commit the changes
