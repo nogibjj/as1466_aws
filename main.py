@@ -27,3 +27,6 @@ stats1 = stats(data)
 #generate boxplot 
 boxplots = sns.boxplot(data)
 plt.savefig('boxplots.png')
+#generate pairplot for variables correlations
+pairplot = sns.pairplot(data, hue="BmiClass")
+plt.savefig('pairplot.png')
