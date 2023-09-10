@@ -14,8 +14,12 @@ lint:
 all: install lint format test
 
 add_commit_push:
-	git config --local user.email "action@github.com"
-	git config --local user.name "GitHub Action"
-	git add pairplot.png  # Adjust the filename if needed
-	git commit -m "Add generated plot image"
-	git push
+	@if [ -n "$$(git status --porcelain)" ]; then \
+		git config --local user.email "action@github.com"; \
+		git config --local user.name "GitHub Action"; \
+		git add pairplot.png; \
+		git commit -m "Add generated plot image"; \
+		git push; \
+	else \
+		echo "No changes to commit. Skipping commit and push."; \
+	fi
