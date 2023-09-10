@@ -25,5 +25,5 @@ data = pd.read_csv('bmi.csv')
 #generate summary statistics 
 stats1 = stats(data)
 #generate boxplot 
-boxplots = sns.boxplot(df)
+boxplots = sns.boxplot(data)
 plt.savefig('boxplots.png')
