@@ -1,3 +1,4 @@
+from main import stats, mean, median, std 
 import pandas as pd
 df = pd.read_csv('bmi.csv')
 def test_main():
@@ -9,9 +10,9 @@ def test_main():
 
     # Use assertions to compare specific values or properties
     assert (stats(df) == stats(df)).all().all()
-    assert (age_mean == df['Age'].mean())
-    assert (height_median == df['Height'].median())
-    assert (weight_std == df['Weight'].std())
+    assert (age_mean == mean(df['Age']))
+    assert (height_median == median(df['Height']))
+    assert (weight_std == std(df['Weight']))
 
 
 
