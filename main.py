@@ -32,4 +32,4 @@ pairplot = sns.pairplot(data, hue="BmiClass")
 plt.savefig('pairplot.png')
 
 s = stats(data)
-print(s.to_markdown())
+
