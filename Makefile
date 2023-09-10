@@ -29,7 +29,7 @@ add_commit_push:
 # Define the name of the Markdown file to append
 APPEND_FILE = Statistics_report.md  # Adjust the path as needed
 
-.PHONY: append_and_commit
+
 
 append_and_commit:
 	# Append the content of the Markdown file to the README
