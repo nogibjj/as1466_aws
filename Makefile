@@ -23,3 +23,24 @@ add_commit_push:
 	else \
 		echo "No changes to commit. Skipping commit and push."; \
 	fi
+
+# Makefile for updating the README with appended content
+
+# Define the name of the Markdown file to append
+APPEND_FILE = path/to/Statistics_report.md  # Adjust the path as needed
+
+.PHONY: append_and_commit
+
+append_and_commit:
+	# Append the content of the Markdown file to the README
+	cat $(APPEND_FILE) >> README.md
+	
+	# Check if there are any changes
+	if [ -n "$$(git status --porcelain)" ]; then \
+		# Commit the changes
+		git add README.md; \
+		git commit -m "Append content to README"; \
+		# Push the changes
+		git push; \
+	fi
+
