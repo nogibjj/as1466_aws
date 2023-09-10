@@ -14,9 +14,9 @@ lint:
 all: install lint format test
 
 add_commit_push:
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    git add boxplots.png  # Adjust the filename if needed
-    git commit -m "Add generated plot image"
-    git push
+    	git config --local user.email "action@github.com"
+    	git config --local user.name "GitHub Action"
+    	git add boxplots.png  # Adjust the filename if needed
+    	git commit -m "Add generated plot image"
+    	git push
 
