@@ -24,6 +24,6 @@ jobs:
       run: make test
     - name: Add_commit_push
       run: make add_commit_push
-    - name: make append_and_commit
-      run: append_and_commit
+    - name: append_and_commit
+      run: make append_and_commit
 
