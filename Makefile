@@ -17,7 +17,7 @@ add_commit_push:
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
-		git add pairplot.png, boxplots.png; \
+		git add pairplot.png, boxplots.png, my_markdown_file.md; \
 		git commit -m "Add generated plot image"; \
 		git push; \
 	else \
