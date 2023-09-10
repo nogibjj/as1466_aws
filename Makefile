@@ -19,4 +19,3 @@ add_commit_push:
     	git add boxplots.png  # Adjust the filename if needed
     	git commit -m "Add generated plot image"
     	git push
-
