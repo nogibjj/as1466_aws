@@ -34,7 +34,7 @@ append_and_commit:
 	# Append the content of the Markdown file to the README
 	cat $(APPEND_FILE) >> README.md
 	# Check if there are any changes
-	if [ -n "$$(git status --porcelain)" ]; then \
+	@if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
 		# Commit the changes
