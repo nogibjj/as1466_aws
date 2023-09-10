@@ -1,3 +1,5 @@
+import pandas as pd
+df = pd.read_csv('bmi.csv')
 def test_main():
     # Calculate statistics once and store them in variables
     #calculated_stats = stats(df)
