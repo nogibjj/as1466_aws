@@ -1,7 +1,17 @@
-from main import basic_two_calculation
-
 def test_main():
-    assert basic_two_calculation(1,2) == 3
-    assert basic_two_calculation(10,10) == 20
+    # Calculate statistics once and store them in variables
+    #calculated_stats = stats(df)
+    age_mean = df['Age'].mean()
+    height_median = df['Height'].median()
+    weight_std = df['Weight'].std()
 
-test_main()
+    # Use assertions to compare specific values or properties
+    #assert (calculated_stats == stats(df)).all()
+    assert (age_mean == df['Age'].mean())
+    assert (height_median == df['Height'].median())
+    assert (weight_std == df['Weight'].std())
+
+
+
+if __name__ == "__main__":
+  test_main()
