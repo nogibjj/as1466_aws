@@ -30,3 +30,24 @@ plt.savefig('boxplots.png')
 #generate pairplot for variables correlations
 pairplot = sns.pairplot(data, hue="BmiClass")
 plt.savefig('pairplot.png')
+
+s = stats(data)
+markdown_string = f'''
+# This is the generated report for summary statistics and data visualization for [bmi.csv](https://github.com/nogibjj/as1466_week2_DE/blob/main/bmi.csv) file
+
+## Overall dataset descriptive statistics 
+
+{s.to_markdown()}
+
+## Here are some data visualizations of data to understand relationships between variables
+
+### Boxplots of each variable
+![Boxplot](boxplots.png)
+
+
+
+### Pairplots of correlation between numerical variables, segmented by BMI segment 
+
+![Variable Correlations](pairplot.png)
+
+'''
