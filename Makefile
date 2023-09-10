@@ -24,10 +24,6 @@ add_commit_push:
 		echo "No changes to commit. Skipping commit and push."; \
 	fi
 
-# Makefile for updating the README with appended content
-
-# Define the name of the Markdown file to append
-
 update-readme:
     cat Statistics_report.md >> README.md
     git config --global user.name "GitHub Actions"
