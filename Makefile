@@ -28,20 +28,10 @@ add_commit_push:
 
 # Define the name of the Markdown file to append
 
-APPEND_FILE = Statistics_report.md  # Adjust the path as needed
-
-append_and_commit:
-	# Append the content of the Markdown file to the README
-	cat $(APPEND_FILE) >> README.md
-	# Check if there are any changes
-	@if [ -n "$$(git status --porcelain)" ]; then \
-		git config --local user.email "action@github.com"; \
-		git config --local user.name "GitHub Action"; \
-		# Commit the changes
-		git add README.md; \
-		git commit -m "Append content to README"; \
-		# Push the changes
-		git push; \
-	else \
-		echo "No changes to commit. Skipping commit and push."; \
-	fi
+update-readme:
+    cat Statistics_report.md >> README.md
+    git config --global user.name "GitHub Actions"
+    git config --global user.email "actions@github.com"
+    git add README.md
+    git commit -m "Update README.md"
+    git push
