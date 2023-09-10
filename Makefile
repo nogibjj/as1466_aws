@@ -36,7 +36,9 @@ append_and_commit:
 	cat $(APPEND_FILE) >> README.md
 	
 	# Check if there are any changes
-	if [ -n "$$(git status --porcelain)" ]; then \
+	@if [ -n "$$(git status --porcelain)" ]; then \
+		git config --local user.email "action@github.com"; \
+		git config --local user.name "GitHub Action"; \
 		# Commit the changes
 		git add README.md; \
 		git commit -m "Append content to README"; \
