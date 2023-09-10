@@ -8,7 +8,7 @@ def test_main():
     weight_std = df['Weight'].std()
 
     # Use assertions to compare specific values or properties
-    #assert (calculated_stats == stats(df)).all()
+    assert (stats(df) == stats(df)).all().all()
     assert (age_mean == df['Age'].mean())
     assert (height_median == df['Height'].median())
     assert (weight_std == df['Weight'].std())
