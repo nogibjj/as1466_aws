@@ -24,10 +24,3 @@ add_commit_push:
 		echo "No changes to commit. Skipping commit and push."; \
 	fi
 
-update-readme:
-    cat Statistics_report.md >> README.md
-    git config --global user.name "GitHub Actions"
-    git config --global user.email "actions@github.com"
-    git add README.md
-    git commit -m "Update README.md"
-    git push
