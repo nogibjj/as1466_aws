@@ -1,4 +1,4 @@
-import pandas as pd
+#import pandas as pd
 #df = pd.read_csv('bmi.csv')
 
 #function to populate all descriptive statistics
