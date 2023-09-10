@@ -42,4 +42,6 @@ append_and_commit:
 		git commit -m "Append content to README"; \
 		# Push the changes
 		git push; \
+	else \
+		echo "No changes to commit. Skipping commit and push."; \
 	fi
