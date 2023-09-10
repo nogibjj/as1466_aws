@@ -43,4 +43,3 @@ append_and_commit:
 		# Push the changes
 		git push; \
 	fi
-
