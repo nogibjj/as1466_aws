@@ -1,3 +1,5 @@
+[![Python CI](https://github.com/nogibjj/as1466_week2_DE/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/as1466_week2_DE/actions/workflows/main.yml)
+
 # IDS706-Week2-project
 
 This is a week-2 assigment project for IDS706 by Anastasiia Saenko (as1466 Duke NetId).
