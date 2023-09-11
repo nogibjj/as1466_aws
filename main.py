@@ -54,6 +54,6 @@ string = f'''
 # Specify the file path where you want to create the Markdown file
 file_path = "Statistics_report.md"
 
-# Open the file in write mode and write the Markdown content to it
+# 
 with open(file_path, "w", encoding="utf-8") as md_file:
     md_file.write(string)
