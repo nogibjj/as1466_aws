@@ -57,3 +57,4 @@ file_path = "Statistics_report.md"
 # 
 with open(file_path, "w", encoding="utf-8") as md_file:
     md_file.write(string)
+print(1+2)
