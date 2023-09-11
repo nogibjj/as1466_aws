@@ -23,6 +23,7 @@ add_commit_push:
 	else \
 		echo "No changes to commit. Skipping commit and push."; \
 	fi
+
 update_readme:
 	cat Statistics_report.md >> README.md
 	git add README.md
